@@ -3201,9 +3201,45 @@ html {
   max-height: 75px;
 }
 
+/* =========================
+   DESKTOP FLOW FIX (no overlaps)
+   ========================= */
+@media (min-width: 1025px) {
 
+  /* Make the sections participate in normal document flow */
+  .hackathon .frame-4,
+  .hackathon .frame-6,
+  .hackathon .text-wrapper-11,
+  .hackathon .group-4 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+  }
 
+  /* Center them with consistent width */
+  .hackathon .frame-4,
+  .hackathon .frame-6 {
+    width: min(1268px, calc(100% - 160px)) !important;
+    margin: 48px auto 0 !important;
+    box-sizing: border-box;
+  }
 
+  /* Space between Overview and the two cards */
+  .hackathon .frame-6 {
+    margin-top: 24px !important;
+  }
 
+  /* “Stages…” title + timeline block */
+  .hackathon .text-wrapper-11 {
+    width: min(1268px, calc(100% - 160px)) !important;
+    margin: 48px auto 16px !important;
+  }
 
+  .hackathon .group-4 {
+    width: min(1200px, calc(100% - 160px)) !important;
+    height: auto !important;        /* important */
+    margin: 0 auto 0 !important;
+  }
+}
 
