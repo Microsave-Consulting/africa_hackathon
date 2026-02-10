@@ -2861,11 +2861,8 @@ html {
 }
 
 .hackathon .frame-2 .group {
-  max-height: 50%;
-  height: auto;
-  width: auto;          /* keep aspect ratio */
-  max-width: 50%;       /* keep the 50/50 layout */
-  object-fit: contain;
+  transform: scale(0.5);
+  transform-origin: right center; /* keep it anchored on the right */
 }
 
 /* tagline text under the row */
@@ -3203,6 +3200,7 @@ html {
 .hackathon .msc-logo {
   max-height: 75px;
 }
+
 
 
 
