@@ -3191,14 +3191,14 @@ html {
 
 /* Logo base styling */
 .hackathon .organiser-logo {
-  height: 90px;           /* base visual height */
+  height: 60px;           /* base visual height */
   width: auto;
-  max-height: 90px;
+  max-height: 60px;
   max-width: 40%;         /* both logos shrink if needed */
   object-fit: contain;    /* clean proportional scaling */
 }
 .hackathon .msc-logo {
-  max-height: 75px;
+  max-height: 60px;
 }
 
 /* =========================
@@ -3242,4 +3242,5 @@ html {
     margin: 0 auto 0 !important;
   }
 }
+
 
