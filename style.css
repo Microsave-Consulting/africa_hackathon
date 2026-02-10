@@ -398,6 +398,11 @@ html {
   line-height: 21.2px;
 }
 
+.hackathon .text-wrapper-7 strong{
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
+}
+
 .hackathon .frame-10 {
   display: flex;
   height: 24px;
@@ -418,6 +423,11 @@ html {
   letter-spacing: 0;
   line-height: 21.2px;
   white-space: nowrap;
+}
+
+.hackathon .text-wrapper-8 strong{
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
 }
 
 .hackathon .frame-11 {
@@ -441,6 +451,7 @@ html {
   letter-spacing: 0;
   line-height: 21.2px;
 }
+
 
 .hackathon .frame-12 {
   display: flex;
@@ -3186,4 +3197,5 @@ html {
 .hackathon .msc-logo {
   max-height: 75px;
 }
+
 
