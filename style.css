@@ -292,6 +292,11 @@ html {
   line-height: normal;
 }
 
+.hackathon .text-wrapper-5 strong {
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
+}
+
 /* DESKTOP: "Who Can Participate" + "Organisers" row */
 .hackathon .frame-6 {
   display: flex;
@@ -3181,3 +3186,4 @@ html {
 .hackathon .msc-logo {
   max-height: 75px;
 }
+
