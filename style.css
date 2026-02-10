@@ -2860,10 +2860,12 @@ html {
   max-width: 50%;
 }
 
-/* right: PNG map SVG */
 .hackathon .frame-2 .group {
-  flex: 1 1 50%;
-  max-width: 50%;
+  max-height: 50%;
+  height: auto;
+  width: auto;          /* keep aspect ratio */
+  max-width: 50%;       /* keep the 50/50 layout */
+  object-fit: contain;
 }
 
 /* tagline text under the row */
@@ -3201,6 +3203,7 @@ html {
 .hackathon .msc-logo {
   max-height: 75px;
 }
+
 
 
 
