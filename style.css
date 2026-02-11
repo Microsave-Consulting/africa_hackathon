@@ -1114,11 +1114,17 @@ html {
 }
 
 .hackathon .frame-32 {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   position: relative;
-  flex: 0 0 auto;
+  width: 100%;
+}
+
+.hackathon .benefit-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .hackathon .ellipse {
@@ -1132,7 +1138,6 @@ html {
 
 .hackathon .text-wrapper-22 {
   position: relative;
-  width: fit-content;
   margin-top: -1.00px;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
@@ -1140,7 +1145,7 @@ html {
   font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hackathon .frame-33 {
@@ -1846,7 +1851,25 @@ html {
     left: 50%;
     transform: translateX(-50%);
     width: min(1268px, calc(100% - 120px));  /* shrink on smaller screens, keep ~60px gutters */
+    max-width: min(1268px, calc(100% - 120px));
     box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hackathon .rectangle-4 {
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+  }
+
+  /* benefits section specific tighten */
+  .hackathon .frame-23,
+  .hackathon .frame-26,
+  .hackathon .frame-29,
+  .hackathon .frame-31 {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 
   /* timeline block “The Ideathon Journey” */
@@ -1855,6 +1878,14 @@ html {
     transform: translateX(-50%);
     width: min(1200px, calc(100% - 120px));
     box-sizing: border-box;
+  }
+
+  .hackathon .frame-14,
+  .hackathon .frame-20,
+  .hackathon .frame-21,
+  .hackathon .frame-22 {
+    width: 100%;
+    max-width: 100%;
   }
   .hackathon .frame-3 {
     left: 87px;     /* match .hackathon .p */
@@ -2008,6 +2039,28 @@ html {
     gap: 16px;
   }
 
+  /* Benefits section: remove extra gutters */
+  .hackathon .benefits-section {
+    padding: 48px 12px 60px;
+    align-items: stretch;
+  }
+
+  .hackathon .frame-23 {
+    width: 100% !important;
+    margin: 0;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .hackathon .frame-26,
+  .hackathon .frame-29,
+  .hackathon .frame-31 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
   /* Cards go full width */
   .hackathon .frame-7,
   .hackathon .frame-12,
@@ -2066,18 +2119,19 @@ html {
     box-sizing: border-box;
   }
 
-   .hackathon .group-4 {
+  .hackathon .group-4 {
     position: relative;
     top: auto;
     left: auto;
     width: 100%;
+    max-width: 100%;
     height: auto;
-    margin: 8px auto 24px;    /* small gap under heading */
-    padding: 0 16px;
+    margin: 8px 0 16px;       /* reset desktop left margin */
+    padding: 0 12px;          /* narrower gutters on mobile */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
   }
 
   /* each stage card full width, stacked */
@@ -2090,7 +2144,7 @@ html {
     left: auto;
     width: 100%;
     max-width: 100%;
-    margin: 0 0 16px;
+    margin: 0;
   }
 
   /* hide decorative vertical line + dots */
