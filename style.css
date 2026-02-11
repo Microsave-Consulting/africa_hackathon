@@ -1333,7 +1333,7 @@ html {
   font-family: "Roboto-Medium", Helvetica;
   font-weight: 500;
   color: #5f5f5f;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
   white-space: normal;        /* was nowrap */
@@ -1346,7 +1346,7 @@ html {
   font-family: "Roboto-Medium", Helvetica;
   font-weight: 500;
   color: #484f53;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
 }
