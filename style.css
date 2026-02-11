@@ -6,21 +6,11 @@ html {
   background-color: #ffffff;
   width: 100%;
   min-width: 1440px;
-  min-height: 5820px;
   position: relative;
 }
 
 .hackathon .nav-bar {
-  display: flex;
-  width: 1440px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 85px;
-  position: absolute;
-  top: 0;
-  left: calc(50.00% - 720px);
-  background-color: #303b6e;
-  box-shadow: 0px 4px 4px #d0d0d040;
+  display: none;
 }
 
 .hackathon .rectangle {
@@ -100,26 +90,20 @@ html {
 }
 
 .hackathon .frame-2 {
-  position: relative !important;   /* no absolute */
-  top: 0 !important;
-  left: 0 !important;
-
-  width: 100% !important;
-  height: auto !important;         /* allow it to grow */
-
+  /* Converted from absolute to relative positioning */
+  position: relative;
+  width: 100%;
   background-color: #303b6e;
-
   display: flex;
   flex-direction: column;
   gap: 24px;
-
-  padding: 96px 80px 56px;          /* adjust if needed */
+  padding: 96px 80px 56px;
   box-sizing: border-box;
 }
 
 /* container that holds BOTH SVGs side-by-side */
 .hackathon .overlap-group {
-  position: relative;                 /* no more absolute hero background */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,14 +112,14 @@ html {
   width: 100%;
   height: auto;
   min-width: 0;
-  background-image: none;             /* we now use <img>, not bg image */
+  background-image: none;
   background-size: contain;
   box-sizing: border-box;
 }
 
 /* title SVG (Papua New Guinea, etc.) */
 .hackathon .group-2 {
-  position: static;                   /* kill absolute */
+  position: static;
   flex: 1 1 50%;
   max-width: 50%;
   height: auto;
@@ -144,7 +128,7 @@ html {
 
 /* PNG map SVG */
 .hackathon .group {
-  position: static;                   /* ensure no absolute here */
+  position: static;
   flex: 1 1 50%;
   max-width: 50%;
   height: auto;
@@ -164,9 +148,7 @@ html {
   align-items: flex-start;
   gap: 8px;
   padding: 12px 20px;
-  position: absolute;
-  top: 427px;
-  left: calc(50.00% - 630px);
+  position: relative;
   border-radius: 12px;
   box-shadow: 0px 0px 6.2px #8c8c8c52;
   background: linear-gradient(
@@ -197,10 +179,9 @@ html {
 }
 
 .hackathon .p {
-  position: absolute;
-  top: 334px;
-  left: 87px;
+  position: relative;
   width: 637px;
+  max-width: 100%;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
@@ -210,14 +191,8 @@ html {
 }
 
 .hackathon .rectangle-2 {
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important;
-
-  width: 100% !important;
-  height: auto !important;          /* avoid fixed blocks pushing up */
-
-  background-color: #f7f9fb;
+  /* No longer needed - background applied to frame-4 */
+  display: none;
 }
 
 
@@ -225,11 +200,14 @@ html {
   display: flex;
   flex-direction: column;
   width: 1268px;
+  max-width: calc(100% - 174px);
   align-items: flex-start;
   gap: 20px;
-  position: absolute;
-  top: 722px;
-  left: calc(50.00% - 632px);
+  position: relative;
+  margin: 60px auto 0;
+  padding: 60px 24px;
+  background-color: transparent; /* matches other sections */
+  box-sizing: border-box;
 }
 
 .hackathon .frame-5 {
@@ -301,11 +279,12 @@ html {
 .hackathon .frame-6 {
   display: flex;
   width: 1268px;
-  align-items: stretch;              /* cards same height */
+  max-width: calc(100% - 174px);
+  align-items: stretch;
   gap: 24px;
-  position: absolute;
-  top: 1100px;                       /* your original vertical position */
-  left: calc(50% - 634px);           /* centred 1268px container */
+  position: relative;
+  margin: 100px auto 0;
+  left: auto;
 }
 
 
@@ -378,7 +357,7 @@ html {
 
 .hackathon .frame-9 {
   display: flex;
-  align-items: flex-start;   /* was center */
+  align-items: center;
   gap: 12px;
   position: relative;
   align-self: stretch;
@@ -405,7 +384,6 @@ html {
 
 .hackathon .frame-10 {
   display: flex;
-  height: 24px;
   align-items: center;
   gap: 12px;
   position: relative;
@@ -432,8 +410,8 @@ html {
 
 .hackathon .frame-11 {
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  align-items: center;
+  gap: 12px;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -498,11 +476,10 @@ html {
 }
 
 .hackathon .text-wrapper-11 {
-    position: absolute;
-  top: 1400px;          /* was 1500px – moved up 100px */
-  left: 120px;
+  position: relative;
   width: auto;
-
+  margin: 100px auto 0;
+  margin-left: 120px;
   font-family: "Roboto-SemiBold", Helvetica;
   font-weight: 600;
   color: #000000;
@@ -514,11 +491,15 @@ html {
 
 
 .hackathon .group-4 {
-  position: absolute;
-  top: 1480px;          /* was 1600px – moved up 120px */
-  left: 120px;
+  position: relative;
+  margin: 80px auto 0;
+  margin-left: 120px;
   width: 1200px;
-  height: 1250px;
+  max-width: calc(100% - 240px);
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 40px 40px;
+  grid-auto-flow: dense;
 }
 
 .hackathon .group-4 .p strong{
@@ -530,16 +511,17 @@ html {
   display: flex;
   flex-direction: column;
   width: 1088px;
+  max-width: 100%;
   align-items: flex-start;
   gap: 16px;
   padding: 24px;
-  position: absolute;
-  top: 0;
-  left: 112px;
+  position: relative;
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid;
   border-color: #f4f4f4;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .hackathon .frame-15 {
@@ -674,16 +656,17 @@ html {
   display: flex;
   flex-direction: column;
   width: 1088px;
+  max-width: 100%;
   align-items: flex-start;
   gap: 16px;
   padding: 24px;
-  position: absolute;
-  top: 330px;
-  left: 112px;
+  position: relative;
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid;
   border-color: #f4f4f4;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .hackathon .element-november {
@@ -725,16 +708,17 @@ html {
   display: flex;
   flex-direction: column;
   width: 1088px;
+  max-width: 100%;
   align-items: flex-start;
   gap: 16px;
   padding: 24px;
-  position: absolute;
-  top: 630px;
-  left: 112px;
+  position: relative;
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid;
   border-color: #f4f4f4;
+  grid-column: 2;
+  grid-row: 3;
 }
 
 .hackathon .digital-ID {
@@ -783,16 +767,17 @@ html {
   display: flex;
   flex-direction: column;
   width: 1088px;
+  max-width: 100%;
   align-items: flex-start;
   gap: 16px;
   padding: 24px;
-  position: absolute;
-  top: 963px;
-  left: 112px;
+  position: relative;
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid;
   border-color: #f4f4f4;
+  grid-column: 2;
+  grid-row: 4;
 }
 
 .hackathon .line {
@@ -800,24 +785,32 @@ html {
   top: 0;
   left: 26px;
   width: 1px;
-  height: 1250px;
+  height: 100%;
+  min-height: 1100px;
   object-fit: cover;
+  z-index: 0;
 }
 
 .hackathon .fi-2 {
-  position: absolute;
-  top: 16px;
-  left: 0;
+  position: relative;
   width: 52px;
   height: 52px;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  margin-top: 24px;
+  justify-self: center;
 }
 
 .hackathon .fi-3 {
-  position: absolute;
-  top: 346px;
-  left: 0;
+  position: relative;
   width: 52px;
   height: 52px;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: start;
+  margin-top: 24px;
+  justify-self: center;
 }
 
 .hackathon .fi-wrapper {
@@ -827,12 +820,18 @@ html {
   justify-content: center;
   gap: 10px;
   padding: 12px;
-  position: absolute;
-  top: 646px;
-  left: 0;
+  position: relative;
   background-color: #eab05c;
   border-radius: 100px;
   overflow: hidden;
+  grid-column: 1;
+  grid-row: 3;
+  align-self: start;
+  justify-self: center;
+  margin-top: 24px;
+  width: 52px;
+  height: 52px;
+  box-sizing: border-box;
 }
 
 .hackathon .fi-4 {
@@ -851,31 +850,42 @@ html {
 }
 
 .hackathon .fi-5 {
-  position: absolute;
-  top: 979px;
-  left: 0;
+  position: relative;
   width: 52px;
   height: 52px;
+  grid-column: 1;
+  grid-row: 4;
+  align-self: start;
+  margin-top: 24px;
+  justify-self: center;
+}
+
+.hackathon .benefits-section {
+  position: relative;
+  width: 100%;
+  background-color: #f7f9fb;
+  padding: 64px 87px 80px;
+  margin-top: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
 }
 
 .hackathon .rectangle-3 {
-  position: absolute;
-  top: 3001px;
-  left: calc(50.00% - 720px);
-  width: 1440px;
-  height: 869px;
-  background-color: #f7f9fb;
+  display: none;
 }
 
 .hackathon .frame-23 {
   display: flex;
   flex-direction: column;
-  width: 783px;
+  width: 1268px;
+  max-width: 100%;
   align-items: flex-start;
-  gap: 8px;
-  position: absolute;
-  top: 3065px;
-  left: 87px;
+  gap: 4px;
+  position: relative;
+  margin: 0;
 }
 
 .hackathon .frame-23 {
@@ -902,22 +912,24 @@ html {
   display: flex;
   flex-direction: column;
   width: 1268px;
+  max-width: calc(100% - 174px);
   align-items: flex-start;
   gap: 8px;
-  position: absolute;
-  top: 3950px;
-  left: 87px;
+  position: relative;
+  margin: 48px auto 0; /* tighter lead-in above cards */
+  margin-left: 87px;
 }
 
 .hackathon .frame-25 {
   display: flex;
   flex-direction: column;
   width: 1268px;
+  max-width: calc(100% - 174px);
   align-items: flex-start;
   gap: 8px;
-  position: absolute;
-  top: 4375px;
-  left: 87px;
+  position: relative;
+  margin: 100px auto 0;
+  margin-left: 87px;
 }
 
 .hackathon .text-wrapper-19 {
@@ -935,12 +947,12 @@ html {
 .hackathon .frame-26 {
   display: flex;
   width: 1268px;
-  align-items: stretch;          /* cards same height */
-  justify-content: space-between;/* spread 3 cards nicely */
+  max-width: 100%;
+  align-items: stretch;
+  justify-content: space-between;
   gap: 24px;
-  position: absolute;
-  top: 3206px;
-  left: 87px;
+  position: relative;
+  margin: 0;
 }
 
 .hackathon .frame-27 {
@@ -1022,12 +1034,14 @@ html {
 .hackathon .frame-29 {
   display: flex;
   width: 1268px;
+  max-width: calc(100% - 174px);
   align-items: stretch;
-  justify-content: center;  /* <-- centers the two benefit cards */
+  justify-content: center;
   gap: 24px;
-  position: absolute;
-  top: 3413px;
-  left: 87px;
+  position: relative;
+  margin: 60px auto 0;
+  margin-left: 87px;
+  z-index: 1;
 }
 
 .hackathon .frame-30 {
@@ -1043,6 +1057,7 @@ html {
   border-radius: 12px;
   border: 1px solid;
   border-color: #e8e8e8;
+  z-index: 2;
 }
 
 .hackathon .vector-wrapper {
@@ -1073,16 +1088,17 @@ html {
   display: flex;
   flex-direction: column;
   width: 1268px;
+  max-width: calc(100% - 174px);
   align-items: flex-start;
-  gap: 16px;
+  gap: 24px;
   padding: 24px;
-  position: absolute;
-  top: 3656px;
-  left: 87px;
-  background-color: #fff6e9;
+  position: relative;
+  margin: 0;
+  background-color: #ffffff;
   border-radius: 12px;
   border: 1px solid;
-  border-color: #eab05c;
+  border-color: #e8e8e8;
+  box-sizing: border-box;
 }
 
 .hackathon .text-wrapper-21 {
@@ -1130,11 +1146,12 @@ html {
 .hackathon .frame-33 {
   display: flex;
   width: 1268px;
+  max-width: calc(100% - 174px);
   align-items: flex-start;
   gap: 24px;
-  position: absolute;
-  top: 4095px;
-  left: 87px;
+  position: relative;
+  margin: 36px auto 0; /* reduce gap below intro copy */
+  margin-left: 87px;
 }
 
 .hackathon .frame-34 {
@@ -1248,11 +1265,12 @@ html {
   display: flex;
   flex-direction: column;
   width: 1268px;
+  max-width: calc(100% - 174px);
   align-items: flex-start;
-  gap: 24px;
-  position: absolute;
-  top: 4450px;
-  left: 87px;
+  gap: 12px; /* tighter spacing between deadline rows */
+  position: relative;
+  margin: 60px auto 0;
+  margin-left: 87px;
 }
 
 .hackathon .frame-39 {
@@ -1357,28 +1375,32 @@ html {
 }
 
 .hackathon .rectangle-4 {
-  position: absolute;
-  top: 4814px;
-  left: calc(50.00% - 720px);
-  width: 1440px;
-  height: 913px;
+  position: relative;
+  width: 100%;
   background-color: #fff6eb;
+  padding: 100px 0 80px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
 .hackathon .frame-42 {
   display: flex;
   flex-direction: column;
   width: 1268px;
+  max-width: calc(100% - 174px);
   align-items: flex-start;
   gap: 44px;
   padding: 24px;
-  position: absolute;
-  top: 4892px;
-  left: calc(50% - 634px);
+  position: relative;
+  margin: 0 auto;
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid;
   border-color: #eab05c;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
 .hackathon .frame-43 {
@@ -1491,16 +1513,17 @@ html {
   display: flex;
   flex-direction: column;
   width: 1268px;
+  max-width: calc(100% - 174px);
   align-items: flex-start;
   gap: 24px;
   padding: 24px;
-  position: absolute;
-  top: 5229px;
-  left: calc(50.00% - 634px);
+  position: relative;
+  margin: 0 auto;
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid;
   border-color: #e4e4e4;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
 }
 
 .hackathon .frame-50 {
@@ -1699,13 +1722,12 @@ html {
 }
 
 .hackathon .rectangle-5 {
- position: absolute;          /* back to absolute */
-  top: 5691px;                 /* same value you had before */
-  left: 0;
-  width: 100%;                 /* stretch full width */
-  height: 129px;               /* or keep your original height */
+  position: relative;
+  width: 100%;
+  min-height: 129px;
   background-color: #303b6e;
-  padding: 0;   
+  padding: 0;
+  margin-top: 0;
 }
 
 .hackathon .text-wrapper-33 {
@@ -2103,7 +2125,7 @@ html {
     left: 0;
     width: 100%;
     height: auto;
-    margin-top: 32px;
+    margin-top: 0;
     padding: 16px 0;
     background-color: #303b6e;  /* keep your footer colour */
   }
@@ -2235,6 +2257,7 @@ html {
     max-width: 100% !important;
     padding: 0 16px !important;
     box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
 
   .hackathon .frame-27,
@@ -2675,7 +2698,6 @@ html {
   height: auto;
 
   background-color: #303b6e;
-
   box-sizing: border-box;
   padding: 96px 80px 56px;      /* adjust if you want more/less padding */
 
@@ -2686,154 +2708,6 @@ html {
 }
 
 /* title SVG + map SVG side-by-side */
-.hackathon .overlap-group {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-
-  padding: 0;
-  background-image: none;       /* we now rely on the <img> elements */
-}
-
-.hackathon .overlap-group img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* left: title SVG */
-.hackathon .group-2 {
-  flex: 1 1 50%;
-  max-width: 50%;
-}
-
-/* right: map SVG */
-.hackathon .group {
-  flex: 1 1 50%;
-  max-width: 50%;
-}
-
-/* tagline – BELOW the title row, ABOVE the button */
-.hackathon .frame-2 > .p {
-  /* kill the old absolute positioning */
-  position: relative;
-  top: auto;
-  left: auto;
-
-  /* layout inside the flex container */
-  align-self: flex-start;
-  order: 2;
-  margin: 0;
-
-  /* visual style */
-  font-family: "Roboto-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 27px;
-  letter-spacing: 0;
-  line-height: 1.3;
-
-  /* keep it on one line and within the left column */
-  white-space: nowrap;
-  max-width: 640px;   /* tweak this value if you want it shorter/longer */
-}
-
-/* button – comes after tagline */
-.hackathon .frame-2 > a {
-  order: 3;
-}
-
-.hackathon .frame-3 {
-  position: relative;           /* cancel old absolute */
-  top: auto;
-  left: auto;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-
-  border-radius: 12px;
-  box-shadow: 0 0 6.2px #8c8c8c52;
-  background: #ffffff;
-}
-
-/* =========================================
-   Responsiveness
-   ========================================= */
-
-/* shrink padding + text size slightly for smaller desktops/tablets */
-@media (max-width: 1200px) {
-  .hackathon .frame-2 {
-    padding: 80px 40px 48px;
-  }
-
-  .hackathon .frame-2 > .p {
-    font-size: 22px;
-  }
-}
-
-/* phones: still side-by-side, but allow tagline to wrap if needed */
-@media (max-width: 900px) {
-  .hackathon .frame-2 {
-    padding: 64px 16px 40px;
-    gap: 20px;
-  }
-
-  .hackathon .overlap-group {
-    gap: 16px;
-  }
-
-  .hackathon .group-2,
-  .hackathon .group {
-    flex: 1 1 50%;
-    max-width: 50%;
-  }
-
-  .hackathon .frame-2 > .p {
-    font-size: 18px;
-    white-space: normal;        /* OK to wrap on very narrow screens */
-  }
-}
-
-@media (max-width: 900px) {
-  .hackathon .frame-2 > .p {
-    white-space: normal;
-    max-width: 100%;
-  }
-}
-/* =========================================
-   FINAL HERO (flex height, no overlap)
-   ========================================= */
-
-.hackathon .frame-2 {
-  /* always relative & full-width */
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-width: 0;
-  height: auto;
-
-  background-color: #303b6e;
-  box-sizing: border-box;
-
-  /* layout: title+map row, then tagline, then button */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-
-  padding: 96px 80px 56px; /* desktop spacing */
-}
-
-/* row with title SVG (left) + map SVG (right) */
 .hackathon .frame-2 .overlap-group {
   position: relative;
   display: flex;
@@ -2847,14 +2721,14 @@ html {
   background-image: none;
 }
 
-/* make both SVGs scale nicely */
+/* Make both SVGs scale nicely */
 .hackathon .frame-2 .overlap-group img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* left: title SVG */
+/* Left: title SVG */
 .hackathon .frame-2 .group-2 {
   flex: 1 1 50%;
   max-width: 50%;
@@ -2865,7 +2739,7 @@ html {
   max-width: 50%; 
 }
 
-/* tagline text under the row */
+/* Tagline text under the row */
 .hackathon .frame-2 > .p {
   position: relative;
   margin: 0;
@@ -2878,12 +2752,12 @@ html {
   letter-spacing: 0;
   line-height: 1.3;
 
-  /* desktop: keep roughly one line, but allow wrapping on smaller widths */
+  /* keep roughly one line on desktop */
   white-space: nowrap;
   max-width: 640px;
 }
 
-/* button under tagline */
+/* Button under tagline */
 .hackathon .frame-2 > a {
   order: 3;
 }
@@ -2928,16 +2802,16 @@ html {
     gap: 16px;
   }
 
+  /* still 50% / 50% – NO STACKING */
   .hackathon .frame-2 .group-2,
   .hackathon .frame-2 .group {
     flex: 1 1 50%;
     max-width: 50%;
   }
 
-  /* allow tagline to wrap on smaller screens */
   .hackathon .frame-2 > .p {
     font-size: 18px;
-    white-space: normal;
+    white-space: normal;    /* allow wrapping on very narrow screens */
     max-width: 100%;
   }
 }
