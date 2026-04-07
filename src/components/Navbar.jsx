@@ -1,4 +1,5 @@
 export default function Navbar() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <>
       <style>{`
@@ -71,7 +72,7 @@ export default function Navbar() {
       `}</style>
 
       <div className="nav-bar">
-        <img className="rectangle" src="/img/rectangle.svg" alt="logo" />
+        <img className="rectangle" src={`${basePath}/img/rectangle.svg`} alt="logo" />
         <div className="frame"></div>
       </div>
     </>

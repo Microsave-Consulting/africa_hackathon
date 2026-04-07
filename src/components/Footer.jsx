@@ -1,4 +1,5 @@
 export default function Footer() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <>
       <style>{`
@@ -112,7 +113,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Microsave Consulting Pvt Ltd.
             </span>
             <img
-              src="/img/rectangle.svg"
+              src={`${basePath}/img/rectangle.svg`}
               className="footer-msc-logo"
               alt="MSC Logo"
             />
@@ -130,7 +131,7 @@ export default function Footer() {
                 aria-label="Twitter"
               >
                 <img
-                  src="/img/msc-twitter.svg"
+                  src={`${basePath}/img/msc-twitter.svg`}
                   className="footer-icon"
                   alt="Twitter"
                 />
@@ -143,7 +144,7 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <img
-                  src="/img/msc-linkedin.svg"
+                  src={`${basePath}/img/msc-linkedin.svg`}
                   className="footer-icon"
                   alt="LinkedIn"
                 />

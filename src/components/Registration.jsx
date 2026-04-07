@@ -1,4 +1,5 @@
 export default function Registration() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <>
       <style>{`
@@ -179,7 +180,7 @@ export default function Registration() {
           <div className="reg-card">
             {/* Questions header */}
             <div className="reg-row">
-              <img className="reg-icon" src="/img/help.svg" alt="Help" />
+              <img className="reg-icon" src={`${basePath}/img/help.svg`} alt="Help" />
               <div className="reg-label-group">
                 <p className="reg-label-title">Questions?</p>
                 <p className="reg-label-sub">Contact our support team</p>
@@ -189,7 +190,7 @@ export default function Registration() {
             {/* Email links */}
             <div className="reg-email-list">
               <div className="reg-row">
-                <img className="reg-icon" src="/img/email.svg" alt="email" />
+                <img className="reg-icon" src={`${basePath}/img/email.svg`} alt="email" />
                 <a
                   className="reg-link"
                   href="mailto:upanzi@andrew.cmu.edu"
@@ -200,7 +201,7 @@ export default function Registration() {
                 </a>
               </div>
               <div className="reg-row">
-                <img className="reg-icon" src="/img/email.svg" alt="email" />
+                <img className="reg-icon" src={`${basePath}/img/email.svg`} alt="email" />
                 <a
                   className="reg-link"
                   href="mailto:pavanesh.dwivedi@microsave.net"
@@ -211,7 +212,7 @@ export default function Registration() {
                 </a>
               </div>
               <div className="reg-row">
-                <img className="reg-icon" src="/img/email.svg" alt="email" />
+                <img className="reg-icon" src={`${basePath}/img/email.svg`} alt="email" />
                 <a
                   className="reg-link"
                   href="mailto:arnav.nigam@microsave.net
@@ -232,7 +233,7 @@ export default function Registration() {
                 <div className="reg-social-row">
                   <img
                     className="reg-social-icon"
-                    src="/img/twitter.svg"
+                    src={`${basePath}/img/twitter.svg`}
                     alt="Twitter"
                   />
                   <a
@@ -249,7 +250,7 @@ export default function Registration() {
                 <div className="reg-social-row">
                   <img
                     className="reg-social-icon"
-                    src="/img/linkedin.svg"
+                    src={`${basePath}/img/linkedin.svg`}
                     alt="LinkedIn"
                   />
                   <p className="reg-social-text">
@@ -275,7 +276,7 @@ export default function Registration() {
                 <div className="reg-social-row">
                   <img
                     className="reg-social-icon"
-                    src="/img/hashtag.svg"
+                    src={`${basePath}/img/hashtag.svg`}
                     alt="hashtag"
                   />
                   <p className="reg-hashtags">

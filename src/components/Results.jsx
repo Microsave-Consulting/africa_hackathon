@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const JUDGES = [
   {
@@ -328,7 +329,7 @@ export default function Results() {
             </button>
             <div className="results-modal-img-wrap">
               <img
-                src="/img/winner.jpg"
+                src={`${basePath}/img/winner.jpg`}
                 alt="PNG National Digital ID Ideathon Winners"
               />
             </div>

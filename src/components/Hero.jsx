@@ -1,4 +1,5 @@
 export default function Hero() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <>
       <style>{`
@@ -118,17 +119,17 @@ export default function Hero() {
         <div className="hero-overlap">
           <img
             className="hero-graphic"
-            src="/img/1_Text 1.svg"
+            src={`${basePath}/img/1_Text 1.svg`}
             alt="Africa Digital ID Hackathon title"
           />
-          <img className="hero-map" src="/img/1_Map 1.svg" alt="Africa map" />
+          <img className="hero-map" src={`${basePath}/img/1_Map 1.svg`} alt="Africa map" />
         </div>
         <p className="hero-p">Build digital identity solutions for Africa</p>
         <a href="#ideathon-journey" className="hero-btn">
           <span className="hero-btn-text">More Details</span>
           <img
             className="hero-btn-icon"
-            src="/img/arrow-right-alt.svg"
+            src={`${basePath}/img/arrow-right-alt.svg`}
             alt="arrow right"
           />
         </a>

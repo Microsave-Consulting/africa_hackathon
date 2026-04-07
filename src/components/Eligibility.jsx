@@ -1,4 +1,5 @@
 export default function Eligibility() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <>
       <style>{`
@@ -228,14 +229,14 @@ export default function Eligibility() {
             {/* Team Composition */}
             <div className="el-card">
               <div className="el-card-header">
-                <img className="el-icon" src="/img/vector-9.svg" alt="" />
+                <img className="el-icon" src={`${basePath}/img/vector-9.svg`} alt="" />
                 <div className="el-card-title">Collaboration</div>
               </div>
               <div className="el-items">
                 <div className="el-item">
                   <img
                     className="el-check"
-                    src="/img/check-circle.svg"
+                    src={`${basePath}/img/check-circle.svg`}
                     alt="check"
                   />
                   <p className="el-item-text">
@@ -245,7 +246,7 @@ export default function Eligibility() {
                 <div className="el-item">
                   <img
                     className="el-check"
-                    src="/img/check-circle.svg"
+                    src={`${basePath}/img/check-circle.svg`}
                     alt="check"
                   />
                   <p className="el-item-text">
@@ -258,14 +259,14 @@ export default function Eligibility() {
             {/* Eligible Participants */}
             <div className="el-card">
               <div className="el-card-header">
-                <img className="el-icon" src="/img/eligible-part.svg" alt="" />
+                <img className="el-icon" src={`${basePath}/img/eligible-part.svg`} alt="" />
                 <div className="el-card-title">Support</div>
               </div>
               <div className="el-items">
                 <div className="el-item">
                   <img
                     className="el-check"
-                    src="/img/check-circle.svg"
+                    src={`${basePath}/img/check-circle.svg`}
                     alt="check"
                   />
                   <p className="el-item-text">
@@ -276,7 +277,7 @@ export default function Eligibility() {
                 <div className="el-item">
                   <img
                     className="el-check"
-                    src="/img/check-circle.svg"
+                    src={`${basePath}/img/check-circle.svg`}
                     alt="check"
                   />
                   <p className="el-item-text">
@@ -286,7 +287,7 @@ export default function Eligibility() {
                 <div className="el-item">
                   <img
                     className="el-check"
-                    src="/img/check-circle.svg"
+                    src={`${basePath}/img/check-circle.svg`}
                     alt="check"
                   />
                   <p className="el-item-text">

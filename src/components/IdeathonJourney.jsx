@@ -1,7 +1,8 @@
 export default function IdeathonJourney() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const stages = [
     {
-      icon: "img/stage1.svg",
+      icon: `${basePath}/img/stage1.svg`,
       stage: "Phase 1",
       duration: "2 months",
       title: "Phase 1: Upskilling and ideation",
@@ -21,7 +22,7 @@ export default function IdeathonJourney() {
       ),
     },
     {
-      icon: "img/stage2.svg",
+      icon: `${basePath}/img/stage2.svg`,
       stage: "Phase 2",
       duration: "2 months",
       title: "Phase 2: Prototyping and development",
@@ -53,7 +54,7 @@ export default function IdeathonJourney() {
       ),
     },
     {
-      icon: "/img/vector-8.svg",
+      icon: `${basePath}/img/vector-8.svg`,
       stage: "Phase 3",
       duration: "2 months",
       title: "Phase 3: Regional semi-finals",
@@ -76,7 +77,7 @@ export default function IdeathonJourney() {
       ),
     },
     {
-      icon: "img/stage4.svg",
+      icon: `${basePath}/img/stage4.svg`,
       stage: "Phase 4",
       duration: "4 days",
       title:

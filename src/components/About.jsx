@@ -299,6 +299,7 @@
 // }
 
 export default function About() {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <>
       <style>{`
@@ -547,7 +548,7 @@ export default function About() {
             <div className="about-card">
               <div className="about-card-header">
                 <div className="about-icon">
-                  <img src="/img/wcp.svg" alt="participate icon" />
+                  <img src={`${basePath}/img/wcp.svg`} alt="participate icon" />
                 </div>
                 <p className="about-card-title">Who Can Participate</p>
               </div>
@@ -572,7 +573,7 @@ export default function About() {
                   },
                 ].map((item, i) => (
                   <div className="about-list-item" key={i}>
-                    <img src="/img/play-arrow.svg" alt="arrow" />
+                    <img src={`${basePath}/img/play-arrow.svg`} alt="arrow" />
                     <p className="about-list-text">
                       {item.label && <strong>{item.label} </strong>}
                       {item.text}
@@ -586,7 +587,7 @@ export default function About() {
             <div className="about-card">
               <div className="about-card-header">
                 <div className="about-icon">
-                  <img src="/img/org.svg" alt="partners icon" />
+                  <img src={`${basePath}/img/org.svg`} alt="partners icon" />
                 </div>
                 <p className="about-card-title">Partners and supporters</p>
               </div>
@@ -597,17 +598,17 @@ export default function About() {
                 </p>
                 <div className="about-logos">
                   <img
-                    src="/img/1_MSC logo.svg"
+                    src={`${basePath}/img/1_MSC logo.svg`}
                     className="about-logo about-logo-msc"
                     alt="MicroSave Consulting logo"
                   />
                   <img
-                    src="/img/1_Upanzi logo.svg"
+                    src={`${basePath}/img/1_Upanzi logo.svg`}
                     className="about-logo"
                     alt="Upanzi DPI Network logo"
                   />
                   <img
-                    src="/img/1_ID4Africa logo.svg"
+                    src={`${basePath}/img/1_ID4Africa logo.svg`}
                     className="about-logo"
                     alt="ID4Africa logo"
                   />

@@ -1,20 +1,21 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const IMAGES = [
-  "/carousel/image1.jpeg",
-  "/carousel/image2.jpeg",
-  "/carousel/image3.jpeg",
-  "/carousel/image4.jpeg",
-  "/carousel/image5.jpeg",
-  "/carousel/image6.jpeg",
-  "/carousel/image7.jpeg",
-  "/carousel/image8.jpeg",
-  "/carousel/image9.jpeg",
-  "/carousel/image10.jpeg",
-  "/carousel/image11.jpeg",
-  "/carousel/image12.jpg",
+  `${basePath}/carousel/image1.jpeg`,
+  `${basePath}/carousel/image2.jpeg`,
+  `${basePath}/carousel/image3.jpeg`,
+  `${basePath}/carousel/image4.jpeg`,
+  `${basePath}/carousel/image5.jpeg`,
+  `${basePath}/carousel/image6.jpeg`,
+  `${basePath}/carousel/image7.jpeg`,
+  `${basePath}/carousel/image8.jpeg`,
+  `${basePath}/carousel/image9.jpeg`,
+  `${basePath}/carousel/image10.jpeg`,
+  `${basePath}/carousel/image11.jpeg`,
+  `${basePath}/carousel/image12.jpg`,
 ];
 
 const AUTO_INTERVAL = 3000;

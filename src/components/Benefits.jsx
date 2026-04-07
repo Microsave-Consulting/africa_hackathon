@@ -1,4 +1,5 @@
 export default function Benefits() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <>
       <style>{`
@@ -203,7 +204,7 @@ export default function Benefits() {
             <div className="ben-card">
               <div className="ben-icon">
                 <img
-                  src="/img/valuable-experience.svg"
+                  src={`${basePath}/img/valuable-experience.svg`}
                   alt="Valuable Experience"
                 />
               </div>
@@ -218,7 +219,7 @@ export default function Benefits() {
 
             <div className="ben-card">
               <div className="ben-icon">
-                <img src="/img/mentor2.svg" alt="Expert Mentorship" />
+                <img src={`${basePath}/img/mentor2.svg`} alt="Expert Mentorship" />
               </div>
               <div className="ben-card-text">
                 <p className="ben-card-title">Expert Mentorship</p>
@@ -231,7 +232,7 @@ export default function Benefits() {
 
             <div className="ben-card">
               <div className="ben-icon">
-                <img src="/img/vector-19.svg" alt="Networking" />
+                <img src={`${basePath}/img/vector-19.svg`} alt="Networking" />
               </div>
               <div className="ben-card-text">
                 <p className="ben-card-title">Networking</p>
@@ -244,7 +245,7 @@ export default function Benefits() {
 
             <div className="ben-card ben-card-4">
               <div className="ben-icon">
-                <img src="/img/recognition.svg" alt="Recognition" />
+                <img src={`${basePath}/img/recognition.svg`} alt="Recognition" />
               </div>
               <div className="ben-card-text">
                 <p className="ben-card-title">Recognition</p>
@@ -257,7 +258,7 @@ export default function Benefits() {
 
             <div className="ben-card ben-card-5">
               <div className="ben-icon">
-                <img src="/img/vector-17.svg" alt="Skills Development" />
+                <img src={`${basePath}/img/vector-17.svg`} alt="Skills Development" />
               </div>
               <div className="ben-card-text">
                 <p className="ben-card-title">Skills Development</p>
@@ -273,7 +274,7 @@ export default function Benefits() {
           <div className="ben-banner">
             <div className="ben-banner-header">
               <div className="ben-icon">
-                <img src="/img/recognition-2.svg" alt="For the winners" />
+                <img src={`${basePath}/img/recognition-2.svg`} alt="For the winners" />
               </div>
               <p className="ben-banner-title">For the winners</p>
             </div>
