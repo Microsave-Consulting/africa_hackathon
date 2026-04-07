@@ -1,28 +1,11 @@
 "use client";
 
 import { useState } from "react";
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
-const JUDGES = [
-  {
-    name: "Dominic Meoli",
-    role: "First Secretary, Australian High Commission",
-    linkedin: "https://www.linkedin.com/in/dominic-meoli-6111b429a/",
-  },
-  {
-    name: "Russel Harada",
-    role: "Director ICTS, PNG University of Technology",
-    linkedin: "https://www.linkedin.com/in/russell-harada-3a087a3a/",
-  },
-  {
-    name: "Josuah Honnes",
-    role: "Digital Transformation & Web Solution Developer, Department of ICT",
-    linkedin: "https://www.linkedin.com/in/joshua-honnes-a9668ba2/",
-  },
-];
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function Results() {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [semiModalOpen, setSemiModalOpen] = useState(false);
+  const [finalModalOpen, setFinalModalOpen] = useState(false);
 
   return (
     <>
@@ -39,7 +22,6 @@ export default function Results() {
           box-sizing: border-box;
         }
 
-        /* ── Heading ── */
         .results-heading {
           display: flex;
           flex-direction: column;
@@ -65,7 +47,7 @@ export default function Results() {
           margin: 0;
         }
 
-        /* ── Judges card ── */
+        /* ── Card ── */
         .results-card {
           display: flex;
           flex-direction: column;
@@ -78,48 +60,13 @@ export default function Results() {
           margin-bottom: 1.5rem;
         }
 
-        .results-judge-list {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-        }
-
-        .results-judge-item {
-          display: flex;
-          align-items: flex-start;
-          gap: 0.75rem;
-        }
-
-        .results-judge-number {
-          font-family: "Roboto-SemiBold", Helvetica, sans-serif;
-          font-weight: 400;
-          color: #000000;
-          font-size: 1rem;
-          line-height: 1.5;
-          flex-shrink: 0;
-          min-width: 1.25rem;
-        }
-
-        .results-judge-text {
-          font-family: "Roboto-Regular", Helvetica, sans-serif;
-          font-weight: 400;
-          color: #000000;
-          font-size: 1rem;
-          line-height: 1.5;
-          margin: 0;
-        }
-
-        .results-judge-link {
+        .results-card-subheading {
           font-family: "Roboto-SemiBold", Helvetica, sans-serif;
           font-weight: 600;
-          color: #2d488d;
-          text-decoration: underline;
-          text-underline-offset: 2px;
-          cursor: pointer;
-          transition: color 0.2s;
-        }
-        .results-judge-link:hover {
-          color: #eab05c;
+          color: #000000;
+          font-size: 1.25rem;
+          line-height: 1.3;
+          margin: 0;
         }
 
         /* ── See Result button ── */
@@ -177,32 +124,41 @@ export default function Results() {
           box-sizing: border-box;
         }
 
-        /* Modal — never wider than viewport, never taller than viewport */
         .results-modal {
           position: relative;
           background: #ffffff;
           border-radius: 1rem;
           overflow: hidden;
           width: 100%;
-          max-width: min(56rem, calc(100vw - 2.5rem));
+          max-width: min(36rem, calc(100vw - 2.5rem));
           max-height: calc(100vh - 2.5rem);
           display: flex;
           flex-direction: column;
           box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
-        /* Scrollable image wrapper so tall images don't overflow on small screens */
-        .results-modal-img-wrap {
-          overflow-y: auto;
-          -webkit-overflow-scrolling: touch;
-          flex: 1;
-          min-height: 0;
+        .results-modal-body {
+          padding: 2.5rem 2rem 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          text-align: center;
         }
 
-        .results-modal-img-wrap img {
-          width: 100%;
-          height: auto;
-          display: block;
+        .results-modal-icon {
+          width: 3rem;
+          height: 3rem;
+          color: #2d488d;
+        }
+
+        .results-modal-text {
+          font-family: "Roboto-SemiBold", Helvetica, sans-serif;
+          font-weight: 600;
+          color: #000000;
+          font-size: 1.125rem;
+          line-height: 1.5;
+          margin: 0;
         }
 
         .results-modal-close {
@@ -219,7 +175,6 @@ export default function Results() {
           align-items: center;
           justify-content: center;
           transition: background 0.2s;
-          flex-shrink: 0;
           z-index: 10;
         }
         .results-modal-close:hover {
@@ -253,50 +208,44 @@ export default function Results() {
 
       <div className="results-section">
         <div className="results-inner">
-          {/* Heading */}
+          {/* Title */}
           <div className="results-heading">
-            <p className="results-title">Final Results</p>
+            <p className="results-title">Results</p>
           </div>
 
-          {/* Judges card */}
+          {/* Semi-Finals card */}
           <div className="results-card">
+            <p className="results-card-subheading">Semi-Finals</p>
             <p className="results-subtitle">
-              Eight shortlisted teams from phase 1 presented their final ideas
-              to an esteemed panel on the sidelines of the fourth PNG Digital
-              Transformation Summit, 2025, in Port Moresby. The judging panel
-              includes:
+              Six teams from each of the four regions — Northern and Central,
+              Eastern, Western, and Southern Africa — were shortlisted for the
+              prototyping phase. Based on innovation, novelty, and potential
+              impact, two teams from each region were selected for the finals.
             </p>
-            <div className="results-judge-list">
-              {JUDGES.map((judge, i) => (
-                <div className="results-judge-item" key={i}>
-                  <span className="results-judge-number">{i + 1}.</span>
-                  <p className="results-judge-text">
-                    <a
-                      className="results-judge-link"
-                      href={judge.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {judge.name}
-                    </a>
-                    {", "}
-                    {judge.role}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <p className="results-subtitle">
-              From the top teams, the judges selected the two winners based on
-              the innovation, creativity, practicality, and scalability of their
-              ideas.
-            </p>
-
-            {/* See Result button */}
             <div className="results-btn-wrap">
               <button
                 className="results-btn"
-                onClick={() => setModalOpen(true)}
+                onClick={() => setSemiModalOpen(true)}
+              >
+                <span className="results-btn-text">See Result</span>
+                <svg className="results-btn-arrow" viewBox="0 0 24 24">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Finals card */}
+          <div className="results-card">
+            <p className="results-card-subheading">Finals</p>
+            <p className="results-subtitle">
+              Eight semi-final winners will present their final ideas to an
+              esteemed panel at ID4Africa AGM in Cote D'Ivoire.
+            </p>
+            <div className="results-btn-wrap">
+              <button
+                className="results-btn"
+                onClick={() => setFinalModalOpen(true)}
               >
                 <span className="results-btn-text">See Result</span>
                 <svg className="results-btn-arrow" viewBox="0 0 24 24">
@@ -308,18 +257,18 @@ export default function Results() {
         </div>
       </div>
 
-      {/* Modal */}
-      {modalOpen && (
+      {/* Semi-Finals Modal */}
+      {semiModalOpen && (
         <div
           className="results-overlay"
           onClick={(e) => {
-            if (e.target === e.currentTarget) setModalOpen(false);
+            if (e.target === e.currentTarget) setSemiModalOpen(false);
           }}
         >
           <div className="results-modal">
             <button
               className="results-modal-close"
-              onClick={() => setModalOpen(false)}
+              onClick={() => setSemiModalOpen(false)}
               aria-label="Close"
             >
               <svg viewBox="0 0 24 24">
@@ -327,11 +276,64 @@ export default function Results() {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
-            <div className="results-modal-img-wrap">
-              <img
-                src={`${basePath}/img/winner.jpg`}
-                alt="PNG National Digital ID Ideathon Winners"
-              />
+            <div className="results-modal-body">
+              <svg
+                className="results-modal-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+              <p className="results-modal-text">
+                Semifinal results to be announced soon.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Finals Modal */}
+      {finalModalOpen && (
+        <div
+          className="results-overlay"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setFinalModalOpen(false);
+          }}
+        >
+          <div className="results-modal">
+            <button
+              className="results-modal-close"
+              onClick={() => setFinalModalOpen(false)}
+              aria-label="Close"
+            >
+              <svg viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+            <div className="results-modal-body">
+              <svg
+                className="results-modal-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+              <p className="results-modal-text">
+                Final results to be announced soon.
+              </p>
             </div>
           </div>
         </div>

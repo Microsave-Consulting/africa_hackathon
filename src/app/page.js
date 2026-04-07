@@ -17,7 +17,7 @@ export default function Home() {
       <IdeathonJourney />
       <Benefits />
       <Eligibility />
-      {/* <Results /> */}
+      <Results />
       {/* <Gallery /> */}
       <Registration />
       <Footer />
