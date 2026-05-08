@@ -35,7 +35,7 @@ export default function Navbar() {
 
             {/* Logo */}
             <a
-              href="https://www.digitalidinnovations.com/use-case-library/"
+              href="https://www.digitalidinnovations.com/"
               aria-label="MSC Home"
               className="hdr-logo"
               target="_blank"
@@ -50,7 +50,7 @@ export default function Navbar() {
 
             {/* Desktop nav links */}
             <div className="hdr-nav-links">
-              <a href="https://www.digitalidinnovations.com/use-case-library/" className="hdr-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.digitalidinnovations.com/" className="hdr-link" target="_blank" rel="noopener noreferrer">
                 Home
               </a>
 
@@ -91,7 +91,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <a href="https://www.digitalidinnovations.com/use-case-library/library" className="hdr-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.digitalidinnovations.com/library" className="hdr-link" target="_blank" rel="noopener noreferrer">
                 Use Case Library
               </a>
             </div>
@@ -118,7 +118,7 @@ export default function Navbar() {
                     <p className="mob-drop-label">Navigation</p>
 
                     <a
-                      href="https://www.digitalidinnovations.com/use-case-library/"
+                      href="https://www.digitalidinnovations.com/"
                       role="menuitem"
                       className="mob-drop-item"
                       target="_blank"
@@ -130,7 +130,7 @@ export default function Navbar() {
                     </a>
 
                     <a
-                      href="https://www.digitalidinnovations.com/use-case-library/library/"
+                      href="https://www.digitalidinnovations.com/library/"
                       role="menuitem"
                       className="mob-drop-item"
                       target="_blank"
